@@ -5,12 +5,13 @@ package com.example.native_in_fluter
 
 
 class MainActivity: FlutterActivity() {
-    // override fun configureFlutterEngine(flutterEngine: FlutterEngine) {
-    //     super.configureFlutterEngine(flutterEngine)
-    //     flutterEngine
-    //             .platformViewsController
-    //             .registry
-    //             .registerViewFactory("<platform-view-type>", 
-    //                                   NativeViewFactory())
-    // }
+    override fun configureFlutterEngine(flutterEngine: FlutterEngine) {
+        super.configureFlutterEngine(flutterEngine)
+        flutterEngine
+                .platformViewsController
+                .registry
+                .registerViewFactory("<platform-view-type>", 
+                                      NativeViewFactory())
+    }
 }
+

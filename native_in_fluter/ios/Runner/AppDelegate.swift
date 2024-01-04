@@ -13,8 +13,8 @@ import Flutter
       nativeViewerPlatformCahannel = FlutterMethodChannel(name: "native_viewer_platform_channel",binaryMessenger: controller.binaryMessenger);
       nativeViewerPlatformCahannel?.invokeMethod("swift_to_flutter", arguments: ["AppDelegate method channel instantiated"]);
       
-//      GeneratedPluginRegistrant.register(with: self);
-      GeneratedPluginRegistrant.register(withRegistry: self);
+     GeneratedPluginRegistrant.register(with: self);
+      // GeneratedPluginRegistrant.register(withRegistry: self);
 
       // MARK: NATIVE in Flutter setup
 

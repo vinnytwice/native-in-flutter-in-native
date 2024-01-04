@@ -22,3 +22,4 @@ internal class NativeView(context: Context, id: Int, creationParams: Map<String?
         textView.text = "Rendered on a native Android view (id: $id)"
     }
 }
+

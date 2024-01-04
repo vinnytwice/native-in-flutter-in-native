@@ -11,3 +11,4 @@ class NativeViewFactory : PlatformViewFactory(StandardMessageCodec.INSTANCE) {
         return NativeView(context, viewId, creationParams)
     }
 }
+
