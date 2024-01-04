@@ -13,6 +13,7 @@
 		17A2D7FA2B457B2B009B75D8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17A2D7F82B457B2B009B75D8 /* Main.storyboard */; };
 		17A2D7FC2B457B2B009B75D8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 17A2D7FB2B457B2B009B75D8 /* Assets.xcassets */; };
 		17A2D7FF2B457B2B009B75D8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17A2D7FD2B457B2B009B75D8 /* LaunchScreen.storyboard */; };
+		E39A1BF45D5080C9980F56B9 /* Pods_native_in_flutter_in_native.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CE93C3B3C050990E680285B /* Pods_native_in_flutter_in_native.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,9 @@
 		17A2D7FB2B457B2B009B75D8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		17A2D7FE2B457B2B009B75D8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		17A2D8002B457B2B009B75D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		494DCB1AD737B11DD9B9595C /* Pods-native_in_flutter_in_native.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-native_in_flutter_in_native.debug.xcconfig"; path = "Target Support Files/Pods-native_in_flutter_in_native/Pods-native_in_flutter_in_native.debug.xcconfig"; sourceTree = "<group>"; };
+		9CE93C3B3C050990E680285B /* Pods_native_in_flutter_in_native.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_native_in_flutter_in_native.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AD9C9113E241EE42300BDFE2 /* Pods-native_in_flutter_in_native.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-native_in_flutter_in_native.release.xcconfig"; path = "Target Support Files/Pods-native_in_flutter_in_native/Pods-native_in_flutter_in_native.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E39A1BF45D5080C9980F56B9 /* Pods_native_in_flutter_in_native.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +47,8 @@
 			children = (
 				17A2D7F12B457B2B009B75D8 /* native_in_flutter_in_native */,
 				17A2D7F02B457B2B009B75D8 /* Products */,
+				C085229A373F02C9C143F01F /* Pods */,
+				9FC35BA3B8B39952FBF1F144 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +74,23 @@
 			path = native_in_flutter_in_native;
 			sourceTree = "<group>";
 		};
+		9FC35BA3B8B39952FBF1F144 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9CE93C3B3C050990E680285B /* Pods_native_in_flutter_in_native.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C085229A373F02C9C143F01F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				494DCB1AD737B11DD9B9595C /* Pods-native_in_flutter_in_native.debug.xcconfig */,
+				AD9C9113E241EE42300BDFE2 /* Pods-native_in_flutter_in_native.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +98,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 17A2D8032B457B2B009B75D8 /* Build configuration list for PBXNativeTarget "native_in_flutter_in_native" */;
 			buildPhases = (
+				EC403E83DCCE07B2C8017E50 /* [CP] Check Pods Manifest.lock */,
+				81E6243D1F6F065724B650BC /* [CP-User] Run Flutter Build native_in_fluter Script */,
 				17A2D7EB2B457B2B009B75D8 /* Sources */,
 				17A2D7EC2B457B2B009B75D8 /* Frameworks */,
 				17A2D7ED2B457B2B009B75D8 /* Resources */,
+				1DD9C0A0E779D854E9FF7BCF /* [CP-User] Embed Flutter Build native_in_fluter Script */,
 			);
 			buildRules = (
 			);
@@ -132,6 +159,51 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1DD9C0A0E779D854E9FF7BCF /* [CP-User] Embed Flutter Build native_in_fluter Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "[CP-User] Embed Flutter Build native_in_fluter Script";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e\nset -u\nsource \"${SRCROOT}/native_in_fluter/.ios/Flutter/flutter_export_environment.sh\"\nexport VERBOSE_SCRIPT_LOGGING=1 && \"$FLUTTER_ROOT\"/packages/flutter_tools/bin/xcode_backend.sh embed_and_thin";
+		};
+		81E6243D1F6F065724B650BC /* [CP-User] Run Flutter Build native_in_fluter Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "[CP-User] Run Flutter Build native_in_fluter Script";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e\nset -u\nsource \"${SRCROOT}/native_in_fluter/.ios/Flutter/flutter_export_environment.sh\"\nexport VERBOSE_SCRIPT_LOGGING=1 && \"$FLUTTER_ROOT\"/packages/flutter_tools/bin/xcode_backend.sh build";
+		};
+		EC403E83DCCE07B2C8017E50 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-native_in_flutter_in_native-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		17A2D7EB2B457B2B009B75D8 /* Sources */ = {
@@ -287,12 +359,14 @@
 		};
 		17A2D8042B457B2B009B75D8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 494DCB1AD737B11DD9B9595C /* Pods-native_in_flutter_in_native.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = KW6AU4Q4NW;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = native_in_flutter_in_native/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -300,6 +374,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -315,12 +390,14 @@
 		};
 		17A2D8052B457B2B009B75D8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AD9C9113E241EE42300BDFE2 /* Pods-native_in_flutter_in_native.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = KW6AU4Q4NW;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = native_in_flutter_in_native/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -328,6 +405,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

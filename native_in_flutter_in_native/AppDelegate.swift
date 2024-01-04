@@ -6,14 +6,24 @@
 //
 
 import UIKit
+import Flutter
+import FlutterPluginRegistrant
+
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
+    lazy var flutterEngine = FlutterEngine(name: "my flutter engine");
+//    let engines = FlutterEngineGroup(name: "multiple-flutters", project: nil)
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        flutterEngine.run(withEntrypoint: "main", libraryURI: "package:native_in_fluter/main.dart");
+        
+        GeneratedPluginRegistrant.register(with: flutterEngine);
+
+
         return true
     }
 
