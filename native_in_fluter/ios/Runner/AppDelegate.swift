@@ -13,11 +13,13 @@ import Flutter
       nativeViewerPlatformCahannel = FlutterMethodChannel(name: "native_viewer_platform_channel",binaryMessenger: controller.binaryMessenger);
       nativeViewerPlatformCahannel?.invokeMethod("swift_to_flutter", arguments: ["AppDelegate method channel instantiated"]);
       
-      GeneratedPluginRegistrant.register(with: self);
+//      GeneratedPluginRegistrant.register(with: self);
+      GeneratedPluginRegistrant.register(withRegistry: self);
+
       // MARK: NATIVE in Flutter setup
 
       weak var registrar = self.registrar(forPlugin: "plugin-name");
-      let factory = DynamicNativeViewFactory(messenger: registrar!.messenger())
+      let factory = FLNativeViewFactory(messenger: registrar!.messenger())
       self.registrar(forPlugin: "<plugin-name>")!.register(
           factory,
           withId: "<platform-view-type>")

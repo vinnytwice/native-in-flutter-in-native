@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 enum ViewControllerGetter: String {
     case viewController
@@ -16,15 +17,15 @@ enum ViewControllerGetter: String {
         case .viewController:
             if let vcParams = params {
                 let vc = ViewController();
-                vc.buttonTitleA = params!["param 1"] as! String;
-                vc.buttonTitleB = params!["param 2"] as! String;
+                vc.buttonTitleA = (params!["param 1"] as! String);
+                vc.buttonTitleB = (params!["param 2"] as! String);
                 return vc
             }
         case .viewController2:
             if let vcParams = params {
                 let vc = ViewController2();
-                vc.buttonTitleA = params!["param 1"] as! String;
-                vc.buttonTitleB = params!["param 2"] as! String;
+                vc.buttonTitleA = (params!["param 1"] as! String);
+                vc.buttonTitleB = (params!["param 2"] as! String);
                 return vc
             }
 
